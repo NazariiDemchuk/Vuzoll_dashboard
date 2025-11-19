@@ -4,41 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
-    <div class="main-container"></div>
-        <div class="side-bar">
+    <main class="main-container">
+        <section class="side-bar">
             <div class="logo">
-                <img src="./images/Logo.svg" alt="Logo">
+                <a href="">
+                    <img src="./images/Logo.svg" alt="Logo">
+                </a>
             </div>
             <div class="side-bar-functions">
                 <div class="inbox">
-                    <img src="./images/Inbox icon.svg" alt="Inbox icon">
-                    <div class="inbox-text">
-                        <p>Inbox</p>
-                        <p>5 open tickets</p>
+                    <div class="inbox-info">
+                        <img src="./images/Inbox icon.svg" alt="Inbox icon">
+                        <div class="inbox-text">
+                            <p class="inbox-text-name">Inbox</p>
+                            <p class="inbox-text-tickets">5 open tickets</p>
+                        </div>
                     </div>
                 </div>
                 <div class="menu-wrapper">
                     <div class="menu-list">
-                        <ul>
-                            <li class="menu-item">
+                        <div class="menu-list-box">
+                            <label class="menu-item">
+                                <input type="checkbox">
+                                <div class="menu-item-text">
                                 <img src="./images/Your assistant.svg" alt="Your assistant icon">
-                                <p>Your assistant</p>
+                                <span>Your assistant</span>
+                                </div>
                                 <img src="./images/Vector.svg" alt="Vector">
-                            </li>
-                            <li class="menu-item">
+                            </label>
+                            <label class="menu-item">
+                                <input type="checkbox">
+                                <div class="menu-item-text">
                                 <img src="./images/Workspace.svg" alt="Workspace icon">
-                                <p>Workspace</p>
+                                <span>Workspace</span>
+                                </div>
                                 <img src="./images/Vector.svg" alt="Vector">
-                            </li>
-                            <li class="menu-item">
+                            </label>
+                            <label class="menu-item">
+                                <input type="checkbox">
+                                <div class="menu-item-text">
                                 <img src="./images/Integrations.svg" alt="Integrations icon">
-                                <p>Integrations</p>
+                                <span>Integrations</span>
+                                </div>
                                 <img src="./images/Vector.svg" alt="Vector">
-                            </li>
-                        </ul>
+                            </label>
+                        </div>
                     </div>
                     <div class="bottom-menu">
                         <div class="bottom-menu-item notification">
@@ -53,79 +69,87 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="settings-container">
+        </section>
+        <section class="settings-container">
             <h1 class="settings-title">Settings</h1>
-            <div class="settings-section personal-info">
-                <h2 class="section-title">Personal Information</h2>
-                <form class="form-row" autocomplete="on">
-                    <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" placeholder="Sophia" class="input-field">
-                    </div>
-                    <div class="form-group">
-                        <label for="username">Surename</label>
-                        <input type="text" id="username" placeholder="Miller" class="input-field">
-                    </div>
-                </form>
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" placeholder="sophia.miller@email.com" class="input-field">
-                    </div>
-                    <div class="form-group">
-                        <label for="phone">Phone</label>
-                        <input type="tel" id="phone" placeholder="+1 (066) 789-6052" class="input-field">
-                    </div>
-                </div>
-            </div>
-            <div class="settings-section notifications">
-                <h2 class="section-title">Notifications</h2>
-                <div class="notification-options">
-                    <div class="notification-item">
-                        <input type="checkbox" id="email-notif" name="notification-type" checked>
-                        <label for="email-notif">Allow email notifications</label>
-                    </div>
-                    <div class="notification-item">
-                        <input type="checkbox" id="sms-notif" name="notification-type">
-                        <label for="sms-notif">Allow SMS notifications</label>
-                    </div>
-                    <div class="notification-item">
-                        <input type="checkbox" id="push-notif" name="notification-type">
-                        <label for="push-notif">Allow Push notifications</label>
-                    </div>
-                </div>
-            </div>
-            <div class="settings-bottom">
-                <div class="settings-section crm-section">
-                    <h2 class="section-title">Your CRM</h2>
-                    <div class="crm-status">
-                        <div class="crm-info">
-                            <img src="./images/crm-icon.svg" alt="CRM icon" class="crm-icon">
-                            <span class="crm-name">Your CRM</span>
-                            <span class="crm-status-badge">Active</span>
+            <div class="settings-section">
+                <div class="personal-info">
+                    <h2 class="section-title">Personal Information</h2>
+                    <form class="form-row" autocomplete="on">
+                        <div class="form-row-box">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" placeholder="Sophia" class="input-field">
+                            </div>
+                            <div class="form-group">
+                                <label for="username">Surename</label>
+                                <input type="text" id="username" placeholder="Miller" class="input-field">
+                            </div>
                         </div>
-                        <button class="crm-menu-btn">
-                            <img src="./images/menu-dots.svg" alt="Menu">
-                        </button>
-                    </div>
-                    <p class="crm-description">Sync your CRM data for more personalized customer interactions.</p>
-                    <button class="disconnect-btn">
-                        <img src="./images/disconnect-icon.svg" alt="Disconnect icon">
-                        Disconnect
-                    </button>
+                        <div class="form-row-box">
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" placeholder="sophia.miller@email.com" class="input-field">
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone</label>
+                                <input type="tel" id="phone" placeholder="+1 (066) 789-6052" class="input-field">
+                            </div>
+                        </div>
+                    </form>
                 </div>
-                <div class="settings-section language-section">
-                    <h2 class="section-title">Language</h2>
-                    <select class="language-select">
-                        <option value="en" selected>English</option>
-                        <option value="ua">Українська</option>
-                        <option value="pl">Polski</option>
-                        <option value="fr">Français</option>
-                    </select>
+                <div class="notifications">
+                    <h2 class="section-title">Notifications</h2>
+                    <div class="notification-options">
+                        <div class="notification-item">
+                            <input type="checkbox" id="email-notif" name="notification-type">
+                            <label for="email-notif">Allow email notifications</label>
+                        </div>
+                        <div class="notification-item">
+                            <input type="checkbox" id="sms-notif" name="notification-type">
+                            <label for="sms-notif">Allow SMS notifications</label>
+                        </div>
+                        <div class="notification-item">
+                            <input type="checkbox" id="push-notif" name="notification-type">
+                            <label for="push-notif">Allow Push notifications</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="settings-bottom">
+                    <div class="crm-section">
+                        <h2 class="section-title">Your CRM</h2>
+                        <div class="crm-status">
+                            <div class="crm-info">
+                                <div class="crm-info-title">
+                                    <img class="crm-icon" src="./images/crm-icon.svg" alt="CRM icon">
+                                    <span class="crm-name">Your CRM</span>
+                                </div>
+                                <span class="crm-status-badge">Active</span>
+                                <button class="crm-btn">
+                                    <img src="./images/menu-dots.svg" alt="Menu">
+                                </button>
+                            </div>
+                            <div class="crm-menu">
+                                <p class="crm-menu-text">Sync your CRM data for more personalized customer interactions.</p>
+                                <button class="crm-menu-btn">
+                                    <img src="./images/disconnect-icon.svg" alt="Disconnect icon">
+                                    Disconnect
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="language-section">
+                        <h2 class="section-title language">Language</h2>
+                        <select class="language-select">
+                            <option value="en" selected>English</option>
+                            <option value="ua">Українська</option>
+                            <option value="pl">Polski</option>
+                            <option value="fr">Français</option>
+                        </select>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
+        </section>
+    </main>
 </body>
 </html>
