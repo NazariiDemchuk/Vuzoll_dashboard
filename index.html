@@ -19,7 +19,7 @@
             </div>
             <div class="side-bar-functions">
                 <div class="inbox">
-                    <div class="inbox-info">
+                    <div class="inbox-info" tabindex="0">
                         <img src="./images/Inbox icon.svg" alt="Inbox icon">
                         <div class="inbox-text">
                             <p class="inbox-text-name">Inbox</p>
@@ -30,7 +30,7 @@
                 <div class="menu-wrapper">
                     <div class="menu-list">
                         <div class="menu-list-box">
-                            <label class="menu-item">
+                            <label class="menu-item" tabindex="0">
                                 <input type="checkbox">
                                 <div class="menu-item-text">
                                 <img src="./images/Your assistant.svg" alt="Your assistant icon">
@@ -38,7 +38,7 @@
                                 </div>
                                 <img src="./images/Vector.svg" alt="Vector">
                             </label>
-                            <label class="menu-item">
+                            <label class="menu-item" tabindex="0">
                                 <input type="checkbox">
                                 <div class="menu-item-text">
                                 <img src="./images/Workspace.svg" alt="Workspace icon">
@@ -46,7 +46,7 @@
                                 </div>
                                 <img src="./images/Vector.svg" alt="Vector">
                             </label>
-                            <label class="menu-item">
+                            <label class="menu-item" tabindex="0">
                                 <input type="checkbox">
                                 <div class="menu-item-text">
                                 <img src="./images/Integrations.svg" alt="Integrations icon">
@@ -57,12 +57,12 @@
                         </div>
                     </div>
                     <div class="bottom-menu">
-                        <div class="bottom-menu-item notification">
+                        <div class="bottom-menu-item notification" tabindex="0">
                             <img src="./images/Notifications.svg" alt="Notifications icon">
                             <img class="notification-badge" src="./images/Notification quantity.svg" alt="Notification quantity">
                             <p>Notifications</p>
                         </div>
-                        <div class="bottom-menu-item">
+                        <div class="bottom-menu-item" tabindex="0">
                             <img src="./images/Settings.svg" alt="Settings icon">
                             <p>Settings</p>
                         </div>
@@ -140,12 +140,30 @@
                     </div>
                     <div class="language-section">
                         <h2 class="section-title language">Language</h2>
-                        <select class="language-select">
-                            <option value="en" selected>English</option>
-                            <option value="ua">Українська</option>
-                            <option value="pl">Polski</option>
-                            <option value="fr">Français</option>
-                        </select>
+                        <div class="select-wrapper">
+                            <input type="radio" name="role" id="l-default" checked hidden>
+                            <input type="radio" name="role" id="l-en" hidden>
+                            <input type="radio" name="role" id="l-ua" hidden>
+                            <input type="radio" name="role" id="l-pl" hidden>
+                            <input type="radio" name="role" id="l-fr" hidden>
+                            <details class="select">
+                                <summary class="language-select">
+                                    <span class="selection"
+                                            data-default="Select language"
+                                            data-en="English"
+                                            data-ua="Українська"
+                                            data-pl="Polski"
+                                            data-fr="Français">
+                                    </span>
+                                </summary>
+                                <div class="dropdown">
+                                    <label class="option" for="l-en" tabindex="0">English</label>
+                                    <label class="option" for="l-ua" tabindex="0">Українська</label>
+                                    <label class="option" for="l-pl" tabindex="0">Polski</label>
+                                    <label class="option" for="l-fr" tabindex="0">Français</label>
+                                </div>
+                            </details>
+                        </div>
                     </div>
                 </div>
             </div>

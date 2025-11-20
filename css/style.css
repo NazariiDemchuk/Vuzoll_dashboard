@@ -209,7 +209,7 @@ body {
 
 .settings-section {
     border-top: 1px solid var(--stroke-1);
-    padding-right: 552px;
+    padding-right: calm(552px);
 }
 
 .personal-info {
@@ -468,43 +468,106 @@ body {
     letter-spacing: -0.4px;
 }
 
-.language-select {
+.select-wrapper {
     display: flex;
-    padding: 14.5px 16px 14.5px 16px;
-    justify-content: center;
-    align-items: center;
-    gap: 4px;
     align-self: stretch;
-    border-radius: 12px;
-    border: 1px solid var(--stroke-2);
+}
+
+.select {
+    position: relative;
+    flex: 1;
+}
+
+.language-select {
+    padding: 14.5px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background-color: var(--bg-2);
+    border: 1px solid var(--stroke-2);
+    border-radius: 12px;
+    cursor: pointer;
+    box-sizing: border-box;
     background-image: url(/images/Vector.svg);
     background-repeat: no-repeat;
     background-position: right 16px center;
     appearance: none;
-    cursor: pointer;
 }
 
-.language-select:focus,
-.language-select:focus-visible,
-.language-select:active {
+.selection {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.dropdown {
+    display: flex;
+    padding: 8px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    align-self: stretch;
+    border-radius: 12px;
+    border: 1px solid var(--stroke-2);
+    background-color: var(--bg-crm);
+    margin-top: 4px;
+}
+
+.option {
+    display: flex;
+    padding: 8px;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.option:hover {
     background-color: var(--bg-1);
-    color: var(--white);      
+    color: var(--white);
+    border-radius: 12px;
+}
+
+.selection::before {
+    content: attr(data-default);
+}
+
+#l-en:checked ~ .select .selection::before {
+    content: attr(data-en);
+}
+#l-ua:checked ~ .select .selection::before {
+    content: attr(data-ua);
+}
+#l-pl:checked ~ .select .selection::before {
+    content: attr(data-pl);
+}
+#l-fr:checked ~ .select .selection::before {
+    content: attr(data-fr);
+}
+
+.select[open] .selection::before {
+    content: attr(data-default);
+}
+
+.select[open] .language-select {
+    background-color: var(--bg-1);    
     border-color: var(--white);
     outline: none;
     background-image: url(/images/Vector-white.svg);
 }
 
-.language-select option {
-    font-size: 16px;
-    font-weight: 400;
-    display: flex;
-    padding: 8px 16px;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 4px;
-    align-self: stretch;
-    border-radius: 12px;
-    border: 1px solid var(--stroke-2);
-    background: var(--bg-crm);
+.select[open] .selection {
+    color: var(--white);
+}
+
+#l-en:checked ~ .language-select,
+#l-ua:checked ~ .language-select,
+#l-pl:checked ~ .language-select,
+#l-fr:checked ~ .language-select {
+    background-color: var(--bg-1);
+    color: var(--white);      
+    border-color: var(--white);
+    background-image: url(/images/Vector-white.svg);
 }
