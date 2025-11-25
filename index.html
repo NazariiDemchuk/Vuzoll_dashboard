@@ -6,18 +6,20 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" type="image/webp" href="./images/Vuzoll.webp?v=1">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
-    <title>Document</title>
+    <title>Vuzoll</title>
 </head>
 <body>
-    <main class="main-container">
-        <section class="side-bar">
-            <div class="logo">
+    <div class="wrapper">
+        <aside class="side-bar">
+            <header class="logo">
                 <a href="">
                     <img src="./images/Logo.svg" alt="Logo">
                 </a>
-            </div>
-            <div class="side-bar-functions">
+            </header>
+
+            <nav class="side-bar-functions">
                 <div class="inbox">
                     <div class="inbox-info" tabindex="0">
                         <img src="./images/Inbox icon.svg" alt="Inbox icon">
@@ -56,7 +58,8 @@
                             </label>
                         </div>
                     </div>
-                    <div class="bottom-menu">
+
+                    <footer class="bottom-menu">
                         <div class="bottom-menu-item notification" tabindex="0">
                             <img src="./images/Notifications.svg" alt="Notifications icon">
                             <img class="notification-badge" src="./images/Notification quantity.svg" alt="Notification quantity">
@@ -66,14 +69,16 @@
                             <img src="./images/Settings.svg" alt="Settings icon">
                             <p>Settings</p>
                         </div>
-                    </div>
+                    </footer>
                 </div>
-            </div>
-        </section>
-        <section class="settings-container">
-            <h1 class="settings-title">Settings</h1>
-            <div class="settings-section">
-                <div class="personal-info">
+            </nav>
+        </aside>
+        <main class="settings-container">
+            <header>
+                <h1 class="settings-title">Settings</h1>
+            </header>
+            <section class="settings-section">
+                <section class="personal-info">
                     <h2 class="section-title">Personal Information</h2>
                     <form class="form-row" autocomplete="on">
                         <div class="form-row-box">
@@ -97,34 +102,34 @@
                             </div>
                         </div>
                     </form>
-                </div>
-                <div class="notifications">
+                </section>
+                <section class="notifications">
                     <h2 class="section-title">Notifications</h2>
-                    <div class="notification-options">
-                        <div class="notification-item">
+                    <ul class="notification-options">
+                        <li class="notification-item">
                             <input type="checkbox" id="email-notif" name="notification-type">
                             <label for="email-notif">Allow email notifications</label>
-                        </div>
-                        <div class="notification-item">
+                        </li>
+                        <li class="notification-item">
                             <input type="checkbox" id="sms-notif" name="notification-type">
                             <label for="sms-notif">Allow SMS notifications</label>
-                        </div>
-                        <div class="notification-item">
+                        </li>
+                        <li class="notification-item">
                             <input type="checkbox" id="push-notif" name="notification-type">
                             <label for="push-notif">Allow Push notifications</label>
-                        </div>
-                    </div>
-                </div>
+                        </li>
+                    </ul>
+                </section>
                 <div class="settings-bottom">
-                    <div class="crm-section">
+                    <section class="crm-section">
                         <h2 class="section-title">Your CRM</h2>
                         <div class="crm-status">
+                            <span class="crm-status-badge">Active</span>
                             <div class="crm-info">
                                 <div class="crm-info-title">
                                     <img class="crm-icon" src="./images/crm-icon.svg" alt="CRM icon">
                                     <span class="crm-name">Your CRM</span>
                                 </div>
-                                <span class="crm-status-badge">Active</span>
                                 <button class="crm-btn">
                                     <img src="./images/menu-dots.svg" alt="Menu">
                                 </button>
@@ -140,7 +145,7 @@
                         <div class="your-crm-modalwin">
                             <div class="modalwin-title">
                                 <p>Create a connection</p>
-                                <button>
+                                <button class="modalwin-cross">
                                     <img src="./images/Cross.svg" alt="">
                                 </button>
                             </div>
@@ -160,8 +165,8 @@
                                 </button>
                             </div>
                         </div>
-                    </div>
-                    <div class="language-section">
+                    </section>
+                    <section class="language-section">
                         <h2 class="section-title language">Language</h2>
                         <div class="select-wrapper">
                             <input type="radio" name="role" id="l-default" checked hidden>
@@ -187,10 +192,10 @@
                                 </div>
                             </details>
                         </div>
-                    </div>
+                    </section>
                 </div>
-            </div>
-        </section>
-    </main>
+            </section>
+        </main>
+    </div>
 </body>
 </html>

@@ -20,17 +20,19 @@
     --bg-active: #3d3733;
     --active: #f48371;
     --stroke-3: #898685;
+    --active-hover: #8b372c;
 }
 
 body {
     background-color: var(--black);
+    overflow: hidden;
 }
 
-.main-container {
+.wrapper {
     display: flex;
     padding: 8px;
     gap: 8px;
-    min-height: 100%;
+    height: 100vh;
 }
 
 /* <----- SIDE-BAR -----> */
@@ -41,6 +43,12 @@ body {
     align-items: flex-start;
     border-radius: 24px;
     background-color: var(--bg-1);
+    position: fixed;
+    left: 8px;
+    top: 8px;
+    bottom: 8px;
+    width: 288px;
+    overflow-y: auto;
 }
 
 .logo {
@@ -176,6 +184,16 @@ body {
     border-radius: 24px;
     background-color: var(--bg-2);
     flex-grow: 1;
+    margin-left: 304px;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+.settings-container > header {
+    position: sticky;
+    top: 0;
+    background-color: var(--bg-2);
+    z-index: 10;
 }
 
 .settings-title {
@@ -191,7 +209,9 @@ body {
 }
 
 .settings-section {
-    width: 65.3%;
+    max-width: 1040px;
+    height: 100%;
+    padding-bottom: 24px;
 }
 
 .personal-info {
@@ -273,6 +293,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 16px;
+    list-style: none;
 }
 
 .notification-item {
@@ -346,6 +367,23 @@ body {
     position: relative;
 }
 
+.crm-status-badge {
+    display: flex;
+    padding: 4px 12px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, -50%);
+    border-radius: 16px;
+    background: var(--bg-active);
+    color: var(--active);
+    font-size: 16px;
+    font-weight: 600;
+}
+
 .crm-info {
     display: flex;
     align-items: center;
@@ -373,27 +411,22 @@ body {
     letter-spacing: 0.5px;
 }
 
-.crm-status-badge {
-    display: flex;
-    padding: 4px 12px;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    position: absolute;
-    left: 43%;
-    top: -13px;
-    border-radius: 16px;
-    background: var(--bg-active);
-    color: var(--active);
-    font-size: 16px;
-    font-weight: 600;
-}
-
 .crm-btn {
     background-color: var(--bg-2);
     border: none;
     cursor: pointer;
-    padding: 4px 10px;
+    padding: 4px 10px 2px;
+    border-radius: 10px;
+    border: 1px solid var(--bg-2);
+}
+
+.crm-btn:hover {
+    background-color: var(--bg-1);
+    border-color: var(--stroke-2);
+}
+
+.crm-btn:active, .crm-btn:focus-visible{
+    background-color: var(--bg-2);
 }
 
 .crm-menu {
@@ -402,13 +435,13 @@ body {
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
+    min-height: 166px;
 }
 
 .crm-menu-text {
     color: var(--grey);
     font-size: 16px;
     font-weight: 400;
-    margin-bottom: 75px;
 }
 
 .crm-menu-btn {
@@ -424,6 +457,15 @@ body {
     font-size: 16px;
     font-weight: 600;
     cursor: pointer;
+    margin-top: auto;
+}
+
+.crm-menu-btn:hover {
+    background-color: var(--bg-1);
+}
+
+.crm-menu-btn:active, .crm-menu-btn:focus-visible{
+    background-color: var(--bg-2);
 }
 
 .your-crm-modalwin {
@@ -449,14 +491,25 @@ body {
     font-weight: 600;
 }
 
-.modalwin-title button {
+.modalwin-cross {
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: var(--bg-crm);
     border: none;
     cursor: pointer;
-    padding: 5px;
+    padding: 6px 5px 5px 6px;
+    border-radius: 10px;
+    border: 1px solid var(--bg-crm);
+}
+
+.modalwin-cross:hover {
+    background-color: var(--bg-2);
+    border-color: var(--stroke-2);
+}
+
+.modalwin-cross:active, .modalwin-cross:focus-visible {
+    background-color: var(--bg-crm);
 }
 
 .modalwin-title-border {
@@ -508,6 +561,14 @@ body {
     flex: 1;
 }
 
+.modalwin-button-save:hover {
+    background-color: var(--active-hover);
+}
+
+.modalwin-button-save:active, .modalwin-button-save:focus-visible {
+    background-color: var(--body-2);
+}
+
 .modalwin-button-save p {
     color: var(--active);
     font-size: 16px;
@@ -525,6 +586,15 @@ body {
     background-color: var(--bg-crm);
     justify-content: center;
     flex: 1;
+}
+
+.modalwin-button-cancle:hover {
+    background-color: var(--bg-2);
+    border-color: var(--stroke-2);
+}
+
+.modalwin-button-cancle:active, .modalwin-button-cancle:focus-visible {
+    background-color: var(--bg-crm);
 }
 
 .modalwin-button-cancle p {
