@@ -30,9 +30,14 @@ body {
 
 .wrapper {
     display: flex;
-    padding: 8px;
-    gap: 8px;
     height: 100vh;
+}
+
+.border {
+    display: flex;
+    padding: 8px;
+    width: 100%;
+    gap: 8px;
 }
 
 /* <----- SIDE-BAR -----> */
@@ -43,12 +48,7 @@ body {
     align-items: flex-start;
     border-radius: 24px;
     background-color: var(--bg-1);
-    position: fixed;
-    left: 8px;
-    top: 8px;
-    bottom: 8px;
     width: 288px;
-    overflow-y: auto;
 }
 
 .logo {
@@ -184,16 +184,6 @@ body {
     border-radius: 24px;
     background-color: var(--bg-2);
     flex-grow: 1;
-    margin-left: 304px;
-    overflow: hidden;
-    overflow-y: scroll;
-}
-
-.settings-container > header {
-    position: sticky;
-    top: 0;
-    background-color: var(--bg-2);
-    z-index: 10;
 }
 
 .settings-title {
@@ -209,9 +199,13 @@ body {
 }
 
 .settings-section {
-    max-width: 1040px;
+    width: 100%;
+    overflow: auto;
     height: 100%;
-    padding-bottom: 24px;
+    margin: 24px;
+    display: grid;
+    flex-direction: column;
+    gap: 24px;
 }
 
 .personal-info {
@@ -222,7 +216,7 @@ body {
     gap: 24px;
     border-radius: 16px;
     border: 1px solid var(--stroke-1);
-    margin: 24px;
+    max-width: 1040px;
 }
 
 .section-title {
@@ -286,7 +280,7 @@ body {
     gap: 24px;
     border-radius: 16px;
     border: 1px solid var(--stroke-1);
-    margin: 24px 24px 12px;
+    max-width: 1040px;
 }
 
 .notification-options {
@@ -356,8 +350,15 @@ body {
 
 .settings-bottom {
     display: flex;
-    margin: 36px 24px 0;
     gap: 48px;
+    margin-top: 24px;
+    max-width: 1074px;
+}
+
+.crm-section {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
 }
 
 .crm-status {
@@ -608,6 +609,7 @@ body {
     flex-direction: column;
     gap: 16px;
     flex-grow: 1;
+    width: 50%;
 }
 
 .language {
