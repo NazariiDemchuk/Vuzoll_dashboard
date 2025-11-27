@@ -203,9 +203,15 @@ body {
     overflow: auto;
     height: 100%;
     margin: 24px;
-    display: grid;
+
+}
+
+.settings-section-border {
+    display: flex;
     flex-direction: column;
     gap: 24px;
+    max-width: 1040px;
+    box-sizing: border-box;
 }
 
 .personal-info {
@@ -216,7 +222,6 @@ body {
     gap: 24px;
     border-radius: 16px;
     border: 1px solid var(--stroke-1);
-    max-width: 1040px;
 }
 
 .section-title {
@@ -280,7 +285,6 @@ body {
     gap: 24px;
     border-radius: 16px;
     border: 1px solid var(--stroke-1);
-    max-width: 1040px;
 }
 
 .notification-options {
@@ -352,7 +356,6 @@ body {
     display: flex;
     gap: 48px;
     margin-top: 24px;
-    max-width: 1074px;
 }
 
 .crm-section {

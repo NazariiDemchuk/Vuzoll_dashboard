@@ -77,121 +77,123 @@
                     <h1 class="settings-title">Settings</h1>
                 </header>
                 <section class="settings-section">
-                    <section class="personal-info">
-                        <h2 class="section-title">Personal Information</h2>
-                        <form class="form-row" autocomplete="on">
-                            <div class="form-row-box">
-                                <div class="form-group">
-                                    <label for="name">Name</label>
-                                    <input type="text" id="name" placeholder="Sophia" class="input-field">
-                                </div>
-                                <div class="form-group">
-                                    <label for="username">Surename</label>
-                                    <input type="text" id="username" placeholder="Miller" class="input-field">
-                                </div>
-                            </div>
-                            <div class="form-row-box">
-                                <div class="form-group">
-                                    <label for="email">Email</label>
-                                    <input type="email" id="email" placeholder="sophia.miller@email.com" class="input-field">
-                                </div>
-                                <div class="form-group">
-                                    <label for="phone">Phone</label>
-                                    <input type="tel" id="phone" placeholder="+1 (066) 789-6052" class="input-field">
-                                </div>
-                            </div>
-                        </form>
-                    </section>
-                    <section class="notifications">
-                        <h2 class="section-title">Notifications</h2>
-                        <ul class="notification-options">
-                            <li class="notification-item">
-                                <input type="checkbox" id="email-notif" name="notification-type">
-                                <label for="email-notif">Allow email notifications</label>
-                            </li>
-                            <li class="notification-item">
-                                <input type="checkbox" id="sms-notif" name="notification-type">
-                                <label for="sms-notif">Allow SMS notifications</label>
-                            </li>
-                            <li class="notification-item">
-                                <input type="checkbox" id="push-notif" name="notification-type">
-                                <label for="push-notif">Allow Push notifications</label>
-                            </li>
-                        </ul>
-                    </section>
-                    <div class="settings-bottom">
-                        <section class="crm-section">
-                            <h2 class="section-title">Your CRM</h2>
-                            <div class="crm-status">
-                                <span class="crm-status-badge">Active</span>
-                                <div class="crm-info">
-                                    <div class="crm-info-title">
-                                        <img class="crm-icon" src="./images/crm-icon.svg" alt="CRM icon">
-                                        <span class="crm-name">Your CRM</span>
+                    <div class="settings-section-border">
+                        <section class="personal-info">
+                            <h2 class="section-title">Personal Information</h2>
+                            <form class="form-row" autocomplete="on">
+                                <div class="form-row-box">
+                                    <div class="form-group">
+                                        <label for="name">Name</label>
+                                        <input type="text" id="name" placeholder="Sophia" class="input-field">
                                     </div>
-                                    <button class="crm-btn">
-                                        <img src="./images/menu-dots.svg" alt="Menu">
-                                    </button>
-                                </div>
-                                <div class="crm-menu">
-                                    <p class="crm-menu-text">Sync your CRM data for more personalized customer interactions.</p>
-                                    <button class="crm-menu-btn">
-                                        <img src="./images/disconnect-icon.svg" alt="Disconnect icon">
-                                        Disconnect
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="your-crm-modalwin">
-                                <div class="modalwin-title">
-                                    <p>Create a connection</p>
-                                    <button class="modalwin-cross">
-                                        <img src="./images/Cross.svg" alt="">
-                                    </button>
-                                </div>
-                                <div class="modalwin-title-border"></div>
-                                <form class="modalwin-fields" autocomplete="on">
-                                    <input type="text" placeholder="Connection name">
-                                    <input type="text" placeholder="API key">
-                                </form>
-                                <div class="modalwin-button">
-                                    <button class="modalwin-button-save">
-                                        <img src="./images/Check.svg" alt="">
-                                        <p>Save</p>
-                                    </button>
-                                    <button class="modalwin-button-cancle">
-                                        <img src="./images/Cross.svg" alt="">
-                                        <p>Cancel</p>
-                                    </button>
-                                </div>
-                            </div>
-                        </section>
-                        <section class="language-section">
-                            <h2 class="section-title language">Language</h2>
-                            <div class="select-wrapper">
-                                <input type="radio" name="role" id="l-default" checked hidden>
-                                <input type="radio" name="role" id="l-en" hidden>
-                                <input type="radio" name="role" id="l-ua" hidden>
-                                <input type="radio" name="role" id="l-pl" hidden>
-                                <input type="radio" name="role" id="l-fr" hidden>
-                                <details class="select">
-                                    <summary class="language-select">
-                                        <span class="selection"
-                                                data-default="Select language"
-                                                data-en="English"
-                                                data-ua="Українська"
-                                                data-pl="Polski"
-                                                data-fr="Français">
-                                        </span>
-                                    </summary>
-                                    <div class="dropdown">
-                                        <label class="option" for="l-en" tabindex="0">English</label>
-                                        <label class="option" for="l-ua" tabindex="0">Українська</label>
-                                        <label class="option" for="l-pl" tabindex="0">Polski</label>
-                                        <label class="option" for="l-fr" tabindex="0">Français</label>
+                                    <div class="form-group">
+                                        <label for="username">Surename</label>
+                                        <input type="text" id="username" placeholder="Miller" class="input-field">
                                     </div>
-                                </details>
-                            </div>
+                                </div>
+                                <div class="form-row-box">
+                                    <div class="form-group">
+                                        <label for="email">Email</label>
+                                        <input type="email" id="email" placeholder="sophia.miller@email.com" class="input-field">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="phone">Phone</label>
+                                        <input type="tel" id="phone" placeholder="+1 (066) 789-6052" class="input-field">
+                                    </div>
+                                </div>
+                            </form>
                         </section>
+                        <section class="notifications">
+                            <h2 class="section-title">Notifications</h2>
+                            <ul class="notification-options">
+                                <li class="notification-item">
+                                    <input type="checkbox" id="email-notif" name="notification-type">
+                                    <label for="email-notif">Allow email notifications</label>
+                                </li>
+                                <li class="notification-item">
+                                    <input type="checkbox" id="sms-notif" name="notification-type">
+                                    <label for="sms-notif">Allow SMS notifications</label>
+                                </li>
+                                <li class="notification-item">
+                                    <input type="checkbox" id="push-notif" name="notification-type">
+                                    <label for="push-notif">Allow Push notifications</label>
+                                </li>
+                            </ul>
+                        </section>
+                        <div class="settings-bottom">
+                            <section class="crm-section">
+                                <h2 class="section-title">Your CRM</h2>
+                                <div class="crm-status">
+                                    <span class="crm-status-badge">Active</span>
+                                    <div class="crm-info">
+                                        <div class="crm-info-title">
+                                            <img class="crm-icon" src="./images/crm-icon.svg" alt="CRM icon">
+                                            <span class="crm-name">Your CRM</span>
+                                        </div>
+                                        <button class="crm-btn">
+                                            <img src="./images/menu-dots.svg" alt="Menu">
+                                        </button>
+                                    </div>
+                                    <div class="crm-menu">
+                                        <p class="crm-menu-text">Sync your CRM data for more personalized customer interactions.</p>
+                                        <button class="crm-menu-btn">
+                                            <img src="./images/disconnect-icon.svg" alt="Disconnect icon">
+                                            Disconnect
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="your-crm-modalwin">
+                                    <div class="modalwin-title">
+                                        <p>Create a connection</p>
+                                        <button class="modalwin-cross">
+                                            <img src="./images/Cross.svg" alt="">
+                                        </button>
+                                    </div>
+                                    <div class="modalwin-title-border"></div>
+                                    <form class="modalwin-fields" autocomplete="on">
+                                        <input type="text" placeholder="Connection name">
+                                        <input type="text" placeholder="API key">
+                                    </form>
+                                    <div class="modalwin-button">
+                                        <button class="modalwin-button-save">
+                                            <img src="./images/Check.svg" alt="">
+                                            <p>Save</p>
+                                        </button>
+                                        <button class="modalwin-button-cancle">
+                                            <img src="./images/Cross.svg" alt="">
+                                            <p>Cancel</p>
+                                        </button>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="language-section">
+                                <h2 class="section-title language">Language</h2>
+                                <div class="select-wrapper">
+                                    <input type="radio" name="role" id="l-default" checked hidden>
+                                    <input type="radio" name="role" id="l-en" hidden>
+                                    <input type="radio" name="role" id="l-ua" hidden>
+                                    <input type="radio" name="role" id="l-pl" hidden>
+                                    <input type="radio" name="role" id="l-fr" hidden>
+                                    <details class="select">
+                                        <summary class="language-select">
+                                            <span class="selection"
+                                                    data-default="Select language"
+                                                    data-en="English"
+                                                    data-ua="Українська"
+                                                    data-pl="Polski"
+                                                    data-fr="Français">
+                                            </span>
+                                        </summary>
+                                        <div class="dropdown">
+                                            <label class="option" for="l-en" tabindex="0">English</label>
+                                            <label class="option" for="l-ua" tabindex="0">Українська</label>
+                                            <label class="option" for="l-pl" tabindex="0">Polski</label>
+                                            <label class="option" for="l-fr" tabindex="0">Français</label>
+                                        </div>
+                                    </details>
+                                </div>
+                            </section>
+                        </div>
                     </div>
                 </section>
             </main>
